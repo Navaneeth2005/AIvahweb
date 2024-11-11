@@ -1,0 +1,828 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Encode+Sans+Semi+Expanded:wght@600&family=Encode+Sans:wght@300;700&family=M+PLUS+Code+Latin&family=Poppins:wght@300&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Raleway&family=Source+Code+Pro:ital,wght@0,300;1,400&family=Young+Serif&family=Yuji+Hentaigana+Akari&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:"Quantico";
+    background-color:  #0a0000; /* Dark Navy Background */
+    color: #FFFFFF; /* White Text */
+    
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color:transparent; /* Deep Blue Navbar */
+    color: #FFFFFF;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+.navbar .log-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.site-title {
+    font-size: 1.5em;
+    color: #FFFFFF; /* Light Blue Title */
+    font-weight: bold;
+}
+.Aivah {
+    color: rgb(9, 161, 221); /* Color for "Aivah" */
+}
+
+.community {
+    color: rgb(142, 12, 175); /* Color for "Community" */
+}
+
+.nav-links {
+    display: flex;
+    list-style:none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #B0B3B8;
+    font-weight: bold;
+    font-size: 1em;
+    transition: color 0.3s;
+    padding-right: 40px;
+}
+
+/* Dropdown Menu */
+ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+    margin: 0;
+}
+.menu-item {
+    position: relative;
+}
+
+.menu-item .dropdown {
+    display: none;  /* Hide the dropdown initially */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item:hover .dropdown {
+    display: block;  /* Show the dropdown when hovered */
+}
+
+.dropdown li {
+    padding: 1px;
+    text-align:left;
+}
+
+.dropdown a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #555;
+}
+
+.nav-links a:hover {
+    color:#0073E6; /* Medium Blue on Hover */
+}
+
+/* Section Styles */
+.section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+#home {
+    background-image: url('./img/AIVAH\ COMMUNITY\ \(3\).jpg'); /* Replace with your image path */
+    background-size: cover;      /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat;
+    height: 100vh;               /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;              /* White text for contrast */
+    position: relative;
+    padding-right:60%; 
+}
+
+
+
+/* Specific Section Background Colors */
+/* Full-page Welcome Section */
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   /* background-color: rgba(0, 23, 31, 0.6); /* Semi-transparent overlay with dark navy color */
+    z-index: 1;
+}
+
+
+#home h1,
+#home p {
+    position: relative;
+    z-index: 2;
+}
+
+
+#home h1 {
+    font-size: 7em; /* Increase font size */
+    font-weight: 1000;
+    color: #0ddceb9c; /* White color */
+    margin: 0;
+    padding-top: 250px;
+    padding-left: 60px;
+    font-family:"Quantico"; /* Replace with a stylish font, or any font you like */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position:absolute;
+    z-index: 2;
+    text-align:left;
+    line-height: 1.1;
+    max-width: 50%; /* Limits width so it doesn’t stretch across the page */
+}
+
+
+
+/* Cursor Movement */
+#home h1:hover {
+    color: #ffffff;
+    cursor: none; /* Hides the default cursor */
+}
+
+#home {
+    position: relative;
+    overflow: hidden;
+}
+
+#home:hover .hero-secondary {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 3em; /* Adjust font size for smaller screens */
+    }
+}
+
+
+#home p {
+    font-size:20px;
+    color: #ffffff; /* White Text */
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+
+
+#events {
+    background-color: #060606;
+    text-align: left; /* Deep Blue for Events */
+}
+
+#devigo {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    background-color: #060606; 
+    font-size:20px;
+}
+
+.devigo-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hackathon Section */
+
+
+.hackathon-item {
+    width: 30%;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px; /* Space between the images */
+}
+.hackathon-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.hackathon-item .hackathon-image {
+    width: 100%; /* Make all images the same size */
+    height: auto;
+}
+
+/* Add hover effect */
+.hackathon-item:hover .hackathon-image {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+.description {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+.description h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.description p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+.hackathon-gallery img {
+    width: 30%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
+}
+/* Styling for the main DEVIGO EVENT title */
+/* Styling for the main DEVIGO EVENT title */
+.devigo-title {
+    font-family:"Quantico", sans-serif; /* Modern and clean font */
+    font-weight: 700; /* Bold font weight for emphasis */
+    font-size: 2.5em; /* Large font size for visibility */
+    color: #2a3a9f; /* Attractive dark blue */
+    text-align: left; /* Aligns text to the left */
+    margin-left: 10px; /* Adds some left margin */
+    margin-bottom: 0.3em; /* Adds spacing below */
+}
+
+/* Styling for Hackathon Domains title */
+.hackathon-domain-title {
+    font-family:"Quantico", sans-serif;/* Professional and readable font */
+    font-weight: 500; /* Slightly less bold than main title */
+    font-size: 1.8em; /* Smaller font size */
+    color: #e65c00; /* Warm, vibrant orange */
+    text-align: left; /* Aligns text to the left */
+    margin-left: 15px; /* Adds a bit more left margin */
+    padding-left: 5px; /* Adds inner padding for a balanced look */
+    border-left: 4px solid #e65c00; /* Adds a left border for emphasis */
+}
+
+
+
+
+#events h2 {
+    font-size: 40px;
+}
+/* Slider Styles */
+.slider-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 1.0s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 300px; /* Adjust height as per your requirement */
+    object-fit: cover; /* Ensures that the image maintains aspect ratio and covers the area */
+    border-radius: 8px; /* Optional, if you want rounded corners */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+
+button {
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+#partners {
+    background-color:black; /* Dark Navy Background */
+   /* padding: 50px 50px;*/
+    text-align:left;
+    font-size: 30px;
+}
+
+#partners h2 {
+    color:#FFFFFF;
+    font-size: 30px;
+     /* Light Blue Text */
+}
+
+/* Partners Box with Light Border */
+.partners-box {
+    background-color:black; /* Dark Navy Background */
+    padding: 20px;
+    border: 2px solid #ffffff; /* Light-colored border */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Slight shadow for depth */
+}
+
+/* Container for logos */
+.partners-container {
+    width: 100%;
+    overflow: hidden; /* Hides logos that are out of the container's view */
+    margin-top: 20px;
+}
+
+/* Scrollable area for logos */
+.partners-logos {
+    display: flex;
+    animation: scroll-left 30s linear infinite; /* Adjust animation speed for smooth scroll */
+}
+
+/* Styling for each logo */
+.partners-logos img {
+    height: 80px; /* Set the logo height */
+    margin: 0 30px; /* Add some space between the logos */
+    object-fit: contain; /* Ensure logos maintain aspect ratio */
+}
+
+/* Animation for scrolling */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0); /* Start position */
+    }
+    100% {
+        transform: translateX(-100%); /* End position, fully scrolled */
+    }
+}
+
+/* Overall styling for the team section */
+.team-section {
+    margin-bottom: 40px;
+    text-align: left;
+    color:#777;
+}
+#ourteam h1{
+    font-size:25px;
+    font:lighter;
+    font-family:"Quantico", sans-serif;
+    text-align: left;
+}
+.team-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:left;
+    gap:150px; /* Space between images */
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.centered-team-row {
+    display: flex;
+    justify-content: center; /* Center these items */
+    gap: 200px; /* Larger gap between President and Vice President */
+    margin-bottom: 40px; /* Add extra space below */
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 150px; /* Adjust size as needed */
+    height: 200px; /* Maintain rectangular box shape */
+    object-fit: cover; /* Ensures images fill the rectangle */
+    margin-bottom: 10px;
+    gap: 150px; /* Space between image and name */
+}
+
+.team-member h3 {
+    font-family:"Quantico", sans-serif;
+    font-size: 1.2em;
+    color: #ffffff;
+    margin: 5px 0;
+}
+
+.team-member p {
+    font-size: 1em;
+    color: #777;
+    margin: 5px 0;
+}
+
+ /* Dark Navy Background */
+
+/*gallery part*/
+#gallery {
+  text-align: left; 
+  color:  #00a8e8;
+  padding-top: 30px;
+  font-size: 30px;
+
+}
+/* Gallery Section Styles */
+
+#gallery h2 {
+    font-size: 30px;
+    color:#FFFFFF;
+    text-align:left;
+    margin-bottom: 50px;
+}
+
+/* Gallery Grid Styles */
+.gallery {
+    display:flex;
+    /*gap: 10px;*/
+   /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));*/
+   /* grid-auto-rows: 180px;*/
+}
+
+/* Image Styles */
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px; /* Optional: Rounded corners */
+    transition: transform 0.3s ease; /* Optional: Hover effect */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Optional: Slight zoom on hover */
+}
+
+h3 {
+    color: #85d1ef; 
+    text-align: left;/* Light Blue for Section Titles */
+}
+
+
+/*influencers part */
+/* INFLUENZA Section */
+#influenza {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#influenza h2 {
+    font-size:30px;
+    color:#FFFFFF;
+    text-align: left;
+}
+
+#influenza p {
+    font-size: 16px;
+    color:#FFFFFF;
+    margin: 10px 0 30px;
+    text-align: left;
+}
+
+/* Influencers Grid */
+.influencers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Influencer Card */
+.influencer-card {
+    text-align: center;
+    width: 180px;
+}
+
+.influencer-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.influencer-card h3 {
+   
+    font-size: 20px; /* Adjust font size if necessary */
+    color:#FFFFFF;
+    white-space: nowrap; /* Prevents text from wrapping to the next line *//* Hides overflow if text is too long */
+    text-overflow: ellipsis; /* Adds "..." if the text overflows */
+    max-width: 100%; /* Ensures the text does not exceed container width */
+}
+
+.social-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
+}
+
+.social-item {
+    font-size: 16px;
+    color:#FFFFFF;
+    display: flex;
+    align-items: center;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 2px;
+}
+
+/*hackathons in event */
+#hackathons {
+    padding: 40px 20px;
+    color:#FFFFFF;
+    text-align: left;
+}
+
+#hackathons h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color:#FFFFFF;
+}
+
+.hackathon-list {
+    display: flex;
+    flex-direction:row;
+    gap: 20px;
+}
+
+.hackathon-item {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between image and name */
+}
+
+.hackathon-item img {
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px; /* Optional: rounded corners */
+    cursor: pointer;
+}
+
+.hackathon-item p {
+    font-size: 18px;
+    color:#FFFFFF;
+    margin: 0;
+}
+
+/*hackathon.html part */
+
+/* Hackathon Section Styling */
+.hackathon-section {
+    padding: 20px;
+}
+
+.hackathon-heading h2 {
+    text-align: left;
+    font-size: 2em;
+    color:#7b76767c;
+}
+.hackathon-heading {
+    font-size: 36px;           /* Set font size */
+    color:#FFFFFF;            /* Dark blue color */
+    text-align:left;       /* Center align the text */
+    margin-top: 50px;          /* Add space above the heading */
+    font-family:"Quantico", sans-serif;  /* Choose a font */
+}
+
+
+
+.hackathon-description {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color:#B2BEB5 ;
+    padding-top: 20px;
+    font-family:"Quantico", sans-serif;
+}
+
+/* Image and Exam Link Styling */
+.hackathon-images {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.image-item {
+    text-align: center;
+}
+
+.image-item img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 5px;
+}
+.hackathon-images .image-item img {
+    width: 100%; /* Adjust percentage as needed */
+    max-width: 400px; /* Limits the maximum width */
+    height: auto;
+}
+
+
+.exam-link {
+    display: block;
+    margin-top: 10px;
+    color: #24a4f4;
+    text-decoration: none;
+}
+
+.exam-link:hover {
+    text-decoration: underline;
+}
+
+/* Resource Links Styling */
+.resources h2 {
+    font-size: 1.5em;
+    margin-top: 30px;
+    color:#797777;
+    text-align: left;
+}
+
+.resources ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resources li a {
+    color: #6051b8;
+    text-decoration: none;
+}
+
+.resources li a:hover {
+    text-decoration: underline;
+}
+
+/*hackathons-part in that button */
+/* Button styling */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff; /* Button color */
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.3s;
+    animation: blink 1s infinite; /* Blinking effect */
+}
+
+/* Hover effect */
+.button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Blinking animation */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/*contact part*/
+/* Contact Section Styles */
+.contact-section {
+    background-color: #d3d3d3; /* Light grey background */
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family:"Quantico";
+}
+
+.email-section {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.mail-us {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.email-address {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+    color: #000;
+
+}
+
+.underline {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #000;
+    margin: 5px 0;
+}
+.underline-1{
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #FFFFFF;
+    margin: 5px 0;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #000;
+
+}
+
+.contact-card {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.position {
+    font-style: italic;
+    font-size: 12px;
+    margin: 5px 0 0;
+}
+
+.phone {
+    font-size: 12px;
+    margin: 5px 0 0;
+}
